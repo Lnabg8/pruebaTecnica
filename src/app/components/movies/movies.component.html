@@ -1,22 +1,22 @@
 <h2>Catálogo</h2>
 <hr>
     
-<div class="card-columns">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="assets/img/palomitas.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                
-                <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-outline-info">
-                        Detalles
-                    </button>
-                </div>
-                </div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4" >
+    <div class="col" *ngFor="let movie of movies">
+        <div class="card" >
+            <img [src]="movie.poster" [alt]="movie.title" class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.genre }}</p>
+            
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-info">
+                    Detalles
+                </button>
+            </div>
             </div>
         </div>
     </div>
-</div>   
+</div>
+ 
