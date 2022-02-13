@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": 0,
       "title": "Dancing Lady",
       "poster": "assets/img/dancingLady.png",
       "genre": ["Comedy", "Musical", "Romance"],
@@ -11,7 +11,7 @@
       "actors": [4, 5, 6]
     },
     {
-      "id": 2,
+      "id": 1,
       "title": "Shining, The",
       "poster": "assets/img/shining.png",
       "genre": ["Horror", "Thriller"],
@@ -21,7 +21,7 @@
       "actors": [5, 6]
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Black Rain (Kuroi ame)",
       "poster": "assets/img/blackRain.png",
       "genre": ["Drama", "War"],
@@ -31,7 +31,7 @@
       "actors": [1]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Spring Break Shark Attack",
       "poster": "assets/img/shark.png",
       "genre": ["Adventure", "Drama", "Horror"],
@@ -41,7 +41,7 @@
       "actors": [8, 9, 10]
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Eulogy",
       "poster": "assets/img/eulogy.png",
       "genre": ["Comedy", "Crime", "Drama"],
@@ -51,7 +51,7 @@
       "actors": [6, 7, 8]
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "V/H/S: Viral",
       "poster": "assets/img/viral.png",
       "genre": ["Horror", "Thriller"],
@@ -61,7 +61,7 @@
       "actors": [3, 4, 5]
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "Venus Wars (Venus Senki)",
       "poster": "assets/img/venus.png",
       "genre": ["Action", "Animation", "Sci-Fi", "War"],
@@ -71,7 +71,7 @@
       "actors": [1, 3, 5]
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "Godzilla vs. Mechagodzilla II (Gojira VS Mekagojira)",
       "poster": "assets/img/godzilla.png",
       "genre": ["Action", "Drama", "Sci-Fi"],
@@ -81,7 +81,7 @@
       "actors": [3, 4, 5]
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "Alien Nation: The Udara Legacy",
       "poster": "assets/img/alien.png",
       "genre": ["Sci-Fi"],
@@ -91,7 +91,7 @@
       "actors": [7, 8, 9]
     },
     {
-      "id": 10,
+      "id": 9,
       "title": "Butterflies Have No Memories",
       "poster": "assets/img/butterflies.png",
       "genre": [],

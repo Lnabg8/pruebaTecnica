@@ -1,0 +1,46 @@
+<h1 class="animated fadeIn">{{ movie.title | uppercase }} <small>({{ movie.year }})</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+
+    <img [src]="movie.poster" class="img-fluid" [alt]="movie.title">
+    <br><br>
+    <div class="d-grid gap-2">
+      <a [routerLink]="['/movies']" class="btn btn-outline-info btn-block">Catálogo</a>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ movie.title }}</h3>
+    <hr>
+    <div class="row">
+      <div class="col-2 text-black">
+        {{ movie.imdbRating }}
+      </div>      
+      <star-rating
+        [value]="movie.imdbRating"
+        [totalstars]="10"
+        checkedcolor="yellow"
+        uncheckedcolor="grey"
+        size="22px"
+        [readonly]="false">
+      </star-rating>
+    </div>
+    <hr>
+    <p>
+      Género: {{ movie.genre }}
+    </p>
+    <hr>
+    <p>
+      Duración: {{ movie.duration }}
+    </p>
+    <hr>
+    <p>
+      Actores: {{ movie.actors }}
+    </p>
+    
+  </div>
+
+</div>

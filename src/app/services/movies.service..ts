@@ -9,18 +9,35 @@ export class MoviesService {
 
   }
 
-
+  /**
+   * Servicio que recupera todo el catálogo de películas
+   */
   getMovies(){
-    return this.http.get('http://localhost:3000/movies');
+    return this.http.get('http://localhost:3002/movies');
   }
 
-  getHeroe( idx: string ){
-    //return this.movies[idx];
+  /**
+   * Servicio que recupera la película según el id
+   * @param {number} id
+   */
+  getMovieId( id: number ){
+    return this.http.get(`http://localhost:3002/movies/${id}`);
   }
 
+  /**
+   * Servicio que recupera la película según el id
+   * @param {number} id
+   */
+  deleteMovieId( id: number ){
+    return this.http.delete(`http://localhost:3002/movies/${id}`);
+  }
 
-
-
+  /**
+   * Servicio que recupera todo el catálogo de actores
+   */
+  getActors(){
+    return this.http.get('http://localhost:3002/actors');
+  }
 
 }
 

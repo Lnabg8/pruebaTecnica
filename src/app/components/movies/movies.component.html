@@ -3,7 +3,7 @@
     
 
 <div class="row row-cols-1 row-cols-md-4 g-4" >
-    <div class="col" *ngFor="let movie of movies">
+    <div class="col" *ngFor="let movie of movies; let i = index">
         <div class="card" >
             <img [src]="movie.poster" [alt]="movie.title" class="card-img-top">
             <div class="card-body">
@@ -11,7 +11,10 @@
             <p class="card-text">{{ movie.genre }}</p>
             
             <div class="d-grid gap-2">
-                <button type="button" class="btn btn-outline-info">
+                <button 
+                (click)="movieDetails(i)"
+                type="button" 
+                class="btn btn-outline-info">
                     Detalles
                 </button>
             </div>
