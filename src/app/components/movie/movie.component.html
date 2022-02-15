@@ -8,7 +8,15 @@
     <img [src]="movie.poster" class="img-fluid" [alt]="movie.title">
     <br><br>
     <div class="d-grid gap-2">
-      <a [routerLink]="['/movies']" class="btn btn-outline-info btn-block">Catálogo</a>
+      <a [routerLink]="['/movies']" class="btn btn-outline-info btn-block">{{'MOVIE.BOTON_CATALOGO' | translate}}</a>
+      <div class="d-grid gap-2">
+        <button 
+          (click)="deleteMovie(movie.id)"
+          type="button" 
+          class="btn btn-outline-danger">
+            {{'MOVIE.BOTON_ELIMINAR' | translate}}
+        </button>
+    </div>
     </div>
   </div>
 
@@ -30,15 +38,15 @@
     </div>
     <hr>
     <p>
-      Género: {{ movie.genre }}
+      {{'MOVIE.GENERO' | translate}}: {{ movie.genre }}
     </p>
     <hr>
     <p>
-      Duración: {{ movie.duration }}
+      {{'MOVIE.DURACION' | translate}}: {{ movie.duration }}
     </p>
     <hr>
     <p>
-      Actores: {{ movie.actors }}
+      {{'MOVIE.ACTORES' | translate}}: {{ movie.actors }}
     </p>
     
   </div>

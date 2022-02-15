@@ -39,16 +39,31 @@ export class MoviesService {
     return this.http.get('http://localhost:3002/actors');
   }
 
+  /**
+   * Servicio que añade una película al catálogo 
+   */
+  newMovie(form: any){
+    return this.http.post('http://localhost:3002/movies', form);
+  }
+
+
+
+  /**
+   * Servicio que busca una película en el catálogo
+   * @param {string} buscador
+   * @param movies
+   */
+  buscarMovie(buscador: string, movies: any) {
+    let movArr = [];
+    buscador = buscador.toLocaleLowerCase();
+    
+    for (let movie of movies) {
+      let title = movie.title.toLocaleLowerCase();
+      if (title.indexOf(buscador) >= 0) {
+        movArr.push(movie);
+      }
+    }
+    return movArr;
+  }
+
 }
-
-
-export interface Movie{
-  title: string;
-  poster: string;
-  genre: string;
-  year: string;
-  duration: string;
-  id?: number;
-  imdbRating: number;
-  actors: string;
-};

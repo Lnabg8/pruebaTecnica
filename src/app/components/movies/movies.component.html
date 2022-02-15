@@ -1,4 +1,28 @@
-<h2>Catálogo</h2>
+<div class="row">
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" #buscarPeli aria-label="Search">
+    <button 
+      (click)= "buscarMovie(buscarPeli.value)"
+      class="btn btn-outline-info" type="submit">{{'HOME.SEARCH' | translate}}</button>
+</form>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-10">
+        <h2>{{'HOME.CATALOGO' | translate}}</h2>
+    </div>
+    <div class="col-md-2">
+        <div class="d-grid gap-4">
+            <button 
+            (click)="showModalNewMovie()"
+            type="button" 
+            class="btn btn-outline-info btn-lg">
+                {{'HOME.NUEVA_PELICULA' | translate}}
+            </button>
+        </div>
+    </div>
+</div>
+
 <hr>
     
 
@@ -12,14 +36,17 @@
             
             <div class="d-grid gap-2">
                 <button 
-                (click)="movieDetails(i)"
+                (click)="movieDetails(movie.id)"
                 type="button" 
                 class="btn btn-outline-info">
-                    Detalles
+                    {{'HOME.BOTON_DETALLE' | translate}}
                 </button>
             </div>
             </div>
         </div>
     </div>
 </div>
- 
+
+<hr>
+
+

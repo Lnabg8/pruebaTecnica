@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { MoviesService } from 'src/app/services/movies.service.';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
@@ -14,7 +15,8 @@ export class MovieComponent {
   actors:any;
 
   constructor( private activatedRoute: ActivatedRoute,
-               private moviesService: MoviesService ) {
+               private moviesService: MoviesService,
+               private router: Router ) {
 
   }
 
@@ -31,7 +33,7 @@ export class MovieComponent {
             this.actors.forEach((element: any) => {
               this.movie.actors.indexOf(element.id) !== -1 ? act.push(` ${element.first_name} ${element.last_name}`) : '';
             });;
-            this.movie.actors = act;
+            this.movie.actors = act.length != 0 ? act : this.movie.actors;
          });
      });
   }
@@ -44,6 +46,18 @@ export class MovieComponent {
       .subscribe(actors => {
         this.actors = actors;
       });
+  }
+
+  /**
+   * Elimina la película seleccionada
+   * @param {number} id
+   */
+  deleteMovie(id: number) {
+    this.moviesService.deleteMovieId(id)
+      .subscribe(data => {
+        this.router.navigate(['/movies']);
+      });
+    
   }
 
 }

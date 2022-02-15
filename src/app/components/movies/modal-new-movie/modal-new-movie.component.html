@@ -1,0 +1,99 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{'MODAL.NUEVA_PELICULA' | translate}}</h4>
+    <i class="fa fa-times" (click)="this.activeModal.close('Close click')"></i>
+</div>
+
+
+<div class="modal-body">
+    <form autocomplete="off" (ngSubmit)="newMovie(formNew)" #formNew="ngForm">
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <label class="col-2 col-form-label">{{'MODAL.TITULO' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="title"
+                    ngModel
+                    placeholder="Título"
+                    required>
+            </div>
+            <div class="col-md-6">
+                <label class="col-2 col-form-label">{{'MODAL.GENERO' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="genre"
+                    ngModel
+                    placeholder="Comedia, horror..."
+                    required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-2 col-form-label">{{'MODAL.AÑO' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="year"
+                    ngModel
+                    placeholder="Año"
+                    required>
+            </div>
+            <div class="col-md-8">
+                <label class="col-2 col-form-label">{{'MODAL.ACTORES' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="actors"
+                    ngModel
+                    placeholder="Actor 1, actor 2..."
+                    required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-2 col-form-label">{{'MODAL.DURACION' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="duration"
+                    ngModel
+                    placeholder="Duración"
+                    required>
+            </div>
+            <div class="col-md-8">
+                <label class="col-2 col-form-label">{{'MODAL.PUNTUACION' | translate}}</label>
+                <input class="form-control"
+                    type="text"
+                    name="imdbRating"
+                    ngModel
+                    placeholder="Puntuación"
+                    required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="col-2 col-form-label">{{'MODAL.PORTADA' | translate}}</label>
+                <input class="form-control"
+                    type="file"
+                    name="poster"
+                    ngModel
+                    placeholder="Seleccionar fichero"
+                    
+                    required>
+            </div>
+        </div>
+
+
+    <div class="form-group row">
+        <label class="col-4 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-4">
+            <button type="button" class="btn btn-outline-secondary btn-block"
+                (click)="this.activeModal.close()">
+                Cancelar
+            </button>
+            <button type="submit" class="btn btn-outline-info btn-block" [disabled]="formNew.status === 'INVALID'">
+                Guardar
+            </button>
+        </div>
+    </div>
+
+    </form>
+</div>

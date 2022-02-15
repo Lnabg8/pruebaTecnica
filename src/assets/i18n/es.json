@@ -1,0 +1,32 @@
+{
+    "HOME": {
+        "CATALOGO": "Catálogo",
+        "NUEVA_PELICULA": "Nueva película",
+        "BOTON_DETALLE": "Detalles",
+        "SEARCH": "Search"
+    },
+    "NAVBAR": {
+        "MOVIES": "Movies",
+        "ABOUT": "About Us"
+    },
+    "MODAL": {
+        "NUEVA_PELICULA": "Nueva película",
+        "TITULO": "Título",
+        "GENERO": "Género",
+        "AÑO": "Año",
+        "ACTORES": "Actores",
+        "DURACION": "Duración",
+        "PUNTUACION": "Puntuación",
+        "PORTADA": "Portada"
+    },
+    "MOVIE": {
+        "BOTON_CATALOGO": "Catálogo",
+        "BOTON_ELIMINAR": "Eliminar",
+        "GENERO": "Género",
+        "DURACION": "Duración",
+        "ACTORES": "Actores"
+    },
+    "ABOUT": {
+        "TITULO": "About Us"
+    }
+}
