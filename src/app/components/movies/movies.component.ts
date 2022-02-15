@@ -21,13 +21,18 @@ export class MoviesComponent implements OnInit {
                private translate: TranslateService, ) { }
 
   ngOnInit(): void {
-  /**
-   * Recupera el catálogo de películas
-   */
-    this.moviesService.getMovies()
-      .subscribe( data => {
-      this.movies = data;
-    })
+    /**
+     * Recupera el catálogo de películas
+     */
+    try {
+        this.moviesService.getMovies()
+          .subscribe( data => {
+          this.movies = data;
+        })
+    } catch (err) {
+        console.log(`Error en el servicio buscarMovie(): ${err}`);
+    }
+  
   }
 
   /**
@@ -57,10 +62,14 @@ export class MoviesComponent implements OnInit {
    * @param {string} buscador
    */
   buscarMovie(buscador: string) {
-    this.moviesService.getMovies()
-      .subscribe( data => {
-        this.movies = this.moviesService.buscarMovie(buscador, data);
-    })
+    try {
+      this.moviesService.getMovies()
+        .subscribe( data => {
+          this.movies = this.moviesService.buscarMovie(buscador, data);
+      })
+    } catch (err) {
+      console.log(`Error en el servicio buscarMovie(): ${err}`);
+    }
   }
   
 
