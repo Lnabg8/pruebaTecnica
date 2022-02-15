@@ -40,7 +40,11 @@ export class MoviesComponent implements OnInit {
    * @param {number} id
    */
   movieDetails(id:number) {
-    this.moviesService.getMovieId(id);
+    try {
+      this.moviesService.getMovieId(id);
+    } catch (err) {
+      console.log(`Error en el servicio movieDetails(): ${err}`);
+    }
     this.router.navigate(['/movie', id]);
   }
 
@@ -67,6 +71,7 @@ export class MoviesComponent implements OnInit {
         .subscribe( data => {
           this.movies = this.moviesService.buscarMovie(buscador, data);
       })
+    //Se añade control de errores  mediente try/catch al no devolver el servicio errores controlados
     } catch (err) {
       console.log(`Error en el servicio buscarMovie(): ${err}`);
     }
